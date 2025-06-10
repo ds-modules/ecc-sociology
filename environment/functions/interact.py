@@ -24,8 +24,8 @@ def clean_enviro_data(file_path):
     Returns:
         pd.DataFrame: Merged and cleaned DataFrame for Los Angeles County.
     """
-    enviro_df = pd.read_excel(file_path)
-    demo_df = pd.read_excel(file_path, sheet_name="Demographic Profile", header=1)
+    enviro_df = pd.read_excel(file_path, engine="openpyxl")
+    demo_df = pd.read_excel(file_path, sheet_name="Demographic Profile", header=1, engine="openpyxl")
 
     columns_to_keep = ["Census Tract", "Total Population", "California County", "Longitude", "Latitude",
                        "PM2.5", "Cleanup Sites", "Haz. Waste", "Pollution Burden", "Asthma", "Cardiovascular Disease", "Traffic", "Poverty", "Unemployment", "Education"]
