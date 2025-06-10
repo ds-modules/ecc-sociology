@@ -20,7 +20,7 @@ Uninsured_Rate= pd.read_csv('data-YAypV.csv')
 Uninsured_Rate = Uninsured_Rate.rename(columns={'X.1': 'Year'}).drop(['AIAN', 'NHPI'], axis=1)
 Uninsured_Rate
 
-insurance= pd.read_csv('data-R8TpY (1).csv')
+insurance= pd.read_csv('data-R8TpY.csv')
 insurance= insurance.drop(['NHPI','AIAN'], axis=1).rename(columns={'Race': 'Insurance Type'})
 insurance
 
@@ -112,10 +112,10 @@ def insurance_type():
 
 
 # Load and stack data
-cancer1 = pd.read_csv('USCSOverviewMap (4).csv')
-cancer2 = pd.read_csv('USCSOverviewMap (5).csv')
-cancer3 = pd.read_csv('USCSOverviewMap (6).csv')
-cancer4 = pd.read_csv('USCSOverviewMap (7).csv')
+cancer1 = pd.read_csv('USCSOverviewMap-1.csv')
+cancer2 = pd.read_csv('USCSOverviewMap-2.csv')
+cancer3 = pd.read_csv('USCSOverviewMap-3.csv')
+cancer4 = pd.read_csv('USCSOverviewMap-4.csv')
 
 cancer_death = pd.concat([cancer1, cancer2, cancer3, cancer4], ignore_index=True)
 
