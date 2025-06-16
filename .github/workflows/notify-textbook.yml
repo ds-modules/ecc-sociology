@@ -18,7 +18,7 @@ jobs:
           curl -s -X POST \
             -H "Authorization: token $TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/<ORG>/ecc-textbook.notebooks/dispatches \
+            https://api.github.com/repos/ds-modules/ecc-textbook.notebooks/dispatches \
             -d "{\"event_type\": \"sync-module\", \
                  \"client_payload\": {\"source_repo\": \"${REPO}\", \
                                       \"folder_name\": \"${FOLDER_NAME}\"}}"
